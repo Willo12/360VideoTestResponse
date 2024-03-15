@@ -1,19 +1,23 @@
-import React from "react";
-
-type Video = {
-    src: string;
+type VideoProps = {
+  src: string;
 };
 
-const Video = ({src}: Video) => {
-
-    return (
-        <>
-        <div className="">
-            <iframe width="700" height="400" src="https://www.youtube-nocookie.com/embed/hEdzv7D4CbQ?si=geoPhnt76Pg7cu2e" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+const Video = ({ src }: VideoProps) => {
+  return (
+    <>
+      <div className="flex mt-2 justify-center items-center">
+        <div className="shadow-md">
+          <iframe
+            className="w-[330px] h-[450px]  lg:w-[720px] lg:h-[400px] 2xl:w-[1280px] 2xl:h-[720px] "
+            src="https://www.youtube-nocookie.com/embed/hEdzv7D4CbQ?si=geoPhnt76Pg7cu2e"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
-        </>
-    )
-
-}
+      </div>
+    </>
+  );
+};
 
 export default Video;
